@@ -10,7 +10,7 @@ Dataset structure and data formats are available at: www.cvlibs.net/datasets/kit
 
 ## Scripts
 
-### Installation
+### Installation (Updated by Myself)
 
 Install `kitti360Scripts` with `pip`
 ```
@@ -19,7 +19,7 @@ pip install git+https://github.com/autonomousvision/kitti360Scripts.git
 
 For the 2D graphical tools you additionally need to install
 ```
-sudo apt install python-tk python-qt5
+sudo apt install python-tk python3-qt5
 ```
 
 We use open3D to visualize 3D point clouds and 3D bounding boxes:
@@ -44,8 +44,17 @@ python kitti360Viewer.py
 You can visualize the 3D fused point clouds and labels using the following tool:
 ```
 cd kitti360scripts/viewer
-python kitti360Viewer3D.py -sequence ${sequence}
+python kitti360Viewer3D.py --sequence ${sequence}
 ```
+
+E.g.,
+
+```
+python kitti360Viewer3D.py --sequence 9
+```
+
+
+---
 
 ### Package Content
 
