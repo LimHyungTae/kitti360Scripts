@@ -4,6 +4,14 @@ This repository contains scripts for inspection of the KITTI-360 dataset. This l
 
 Details and download are available at: www.cvlibs.net/datasets/kitti-360
 
+## REMARK
+
+numpy version should be downgraded. Otherwise, `pcd.points = open3d.utility.Vector3dVector(points)` brings unexpected segmentation fault error.
+
+It can be managed by running `pip3 install numpy==1.26.4` (I tested the code on Open3D 0.18.0 version).
+
+---
+
 ## Dataset Structure
 
 Dataset structure and data formats are available at: www.cvlibs.net/datasets/kitti-360/documentation.php
