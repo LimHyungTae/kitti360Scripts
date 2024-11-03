@@ -55,7 +55,7 @@ def loadPoses (pos_file):
   ''' load system poses '''
 
   data = np.loadtxt(pos_file)
-  ts = data[:, 0].astype(np.int)
+  ts = data[:, 0].astype(np.int32)
   poses = np.reshape(data[:, 1:], (-1, 3, 4))
   poses = np.concatenate((poses, np.tile(np.array([0, 0, 0, 1]).reshape(1,1,4),(poses.shape[0],1,1))), 1)
   return ts, poses

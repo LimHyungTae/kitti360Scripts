@@ -55,7 +55,7 @@ class KITTI360(object):
     def load_poses(self):
         # load poses of the current camera
         poses = np.loadtxt(self.pose_file)
-        self.frames = poses[:,0].astype(np.int)
+        self.frames = poses[:,0].astype(np.int64)
         self.poses = np.reshape(poses[:,1:], (-1, 4, 4))
         print('Number of posed frames %d' % len(self.frames))
 
